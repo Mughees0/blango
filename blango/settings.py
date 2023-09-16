@@ -49,6 +49,7 @@ class Dev(Configuration):
       'django.contrib.sessions',
       'django.contrib.messages',
       'django.contrib.staticfiles',
+      "blango_auth",
       'blog',
       'crispy_forms',
       'crispy_bootstrap5',
@@ -138,6 +139,7 @@ class Dev(Configuration):
   STATIC_URL = '/static/'
   
   INTERNAL_IPS = ["192.168.10.156"]
+  AUTH_USER_MODEL = "blango_auth.User"
 
   # Default primary key field type
   # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

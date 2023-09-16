@@ -13,6 +13,14 @@
     </div>
 {% endrow %}
 
+{% if post.author.profile %}
+    {% row %}
+        {% col %}
+            <h4>About the author</h4>
+            <p>{{ post.author.profile.bio }}</p>
+        {% endcol %}
+    {% endrow %}
+{% endif %}
 <!-- existing code here -->
 
 {% include "blog/post-comments.html" %}
@@ -24,13 +32,4 @@
         {% endcache %}
     {% endcol %}
 {% endrow %}
-
-{% if post.author.profile %}
-    {% row %}
-        {% col %}
-            <h4>About the author</h4>
-            <p>{{ post.author.profile.bio }}</p>
-        {% endcol %}
-    {% endrow %}
-{% endif %}
 {% endblock %}
