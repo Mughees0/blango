@@ -65,6 +65,7 @@ class Dev(Configuration):
       "rest_framework",
       "rest_framework.authtoken",
       "drf_yasg",
+      "versatileimagefield",
   ]
 
   MIDDLEWARE = [
@@ -79,6 +80,7 @@ class Dev(Configuration):
   ]
 
   ROOT_URLCONF = 'blango.urls'
+
 
   TEMPLATES = [
       {
@@ -204,6 +206,8 @@ class Dev(Configuration):
   DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
   CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
   CRISPY_TEMPLATE_PACK = "bootstrap5"
+  MEDIA_ROOT = BASE_DIR / "media"
+  MEDIA_URL = "/media/"
 
   PASSWORD_HASHERS = [
       'django.contrib.auth.hashers.Argon2PasswordHasher',
